@@ -1,0 +1,12 @@
+<div style="padding: 20px;" (click)="increment()">{{foo}}</div>
+<div *ngFor="let num of arr">{{num}}</div>
+<input type="text" [(ngModel)]="bar">
+<div>Resultat : {{bar}}</div>
+<div>Service: {{test1}}</div>
+<test foo="Bonjour"></test>
+<button (click)="setValue('Changed!')">Change value</button>
+<!--<h1>Nombre de lampes : {{lightService.lightbulbs.length}}</h1>
+<input [(ngModel)]="lightService.lightbulbs.length" (change)="lightService.addLightBulb">-->
+<div *ngFor="let bulb of lightService.lightbulbs">
+    <app-lampe [id]="bulb.id"></app-lampe>
+</div>
